@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381EE77027603CBF0000407F /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381EE76F27603CBF0000407F /* MKCoordinateRegion.swift */; };
+		381EE773276046390000407F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381EE772276046390000407F /* LocationManager.swift */; };
+		381EE7762760483C0000407F /* PlaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381EE7752760483C0000407F /* PlaceListViewModel.swift */; };
 		3824B9F52758222900E7D46E /* Near_By_Furry_FellowsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3824B9F42758222900E7D46E /* Near_By_Furry_FellowsApp.swift */; };
 		3824B9F72758222900E7D46E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3824B9F62758222900E7D46E /* ContentView.swift */; };
 		3824B9F92758222B00E7D46E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3824B9F82758222B00E7D46E /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		381EE76F27603CBF0000407F /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
+		381EE772276046390000407F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		381EE7752760483C0000407F /* PlaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewModel.swift; sourceTree = "<group>"; };
 		3824B9F12758222900E7D46E /* Near By Furry Fellows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Near By Furry Fellows.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3824B9F42758222900E7D46E /* Near_By_Furry_FellowsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Near_By_Furry_FellowsApp.swift; sourceTree = "<group>"; };
 		3824B9F62758222900E7D46E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381EE76E27603B570000407F /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				381EE76F27603CBF0000407F /* MKCoordinateRegion.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		381EE7712760461D0000407F /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				381EE772276046390000407F /* LocationManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		381EE7742760481F0000407F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				381EE7752760483C0000407F /* PlaceListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3824B9E82758222900E7D46E = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +81,9 @@
 		3824B9F32758222900E7D46E /* Near By Furry Fellows */ = {
 			isa = PBXGroup;
 			children = (
+				381EE7742760481F0000407F /* ViewModel */,
+				381EE7712760461D0000407F /* LocationManager */,
+				381EE76E27603B570000407F /* Extentions */,
 				3824B9F42758222900E7D46E /* Near_By_Furry_FellowsApp.swift */,
 				3824B9F62758222900E7D46E /* ContentView.swift */,
 				3824B9F82758222B00E7D46E /* Assets.xcassets */,
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381EE773276046390000407F /* LocationManager.swift in Sources */,
 				3824B9F72758222900E7D46E /* ContentView.swift in Sources */,
 				3824B9F52758222900E7D46E /* Near_By_Furry_FellowsApp.swift in Sources */,
+				381EE7762760483C0000407F /* PlaceListViewModel.swift in Sources */,
+				381EE77027603CBF0000407F /* MKCoordinateRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +305,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Near By Furry Fellows/Preview Content\"";
+				DEVELOPMENT_TEAM = T5U6K73N29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Near By Furry Fellows requires your location in order to provide best recommendations.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Near By Furry Fellows requires your location in order to provide best recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,8 +337,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Near By Furry Fellows/Preview Content\"";
+				DEVELOPMENT_TEAM = T5U6K73N29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Near By Furry Fellows requires your location in order to provide best recommendations.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Near By Furry Fellows requires your location in order to provide best recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
