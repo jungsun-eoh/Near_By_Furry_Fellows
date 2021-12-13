@@ -13,7 +13,7 @@ struct Fellow: Identifiable {
     let id = UUID()
     let name: String
     let status: String
-    let description: [String]
+    let descLists: [String]
     let coordinate: CLLocationCoordinate2D
 }
 
@@ -23,9 +23,9 @@ struct ContentView: View {
     @State private var searchTerm: String = ""
     
     let furryFellows = [
-        Fellow(name: "Felix", status: "stray cat", description: ["Felix is kind and friendly.", "Felix is too friendly, I think he is indoor cat", "I took him to vet to check the chip on him, but no.", "oh...","Someone is looking for black cat near parkmerced, and I think it is Felix!"], coordinate: CLLocationCoordinate2D(latitude: 37.722548511737195, longitude: -122.48208693212523)),
-        Fellow(name: "Tigger", status: "indoor cat likes to go out", description: ["Hi everyone, This is my cat Tigger, She is curious and fun who likes to hang out near my house. Please don't feed her snack. She is getting enough.", "I saw her yesterday at my backyard. she's a cutie"], coordinate: CLLocationCoordinate2D(latitude: 37.71856948428043, longitude: -122.48139363763083)),
-        Fellow(name: "Cheetos", status: "community cats", description: ["I saw her yesterday, she seemed hungry so I fed her.", "oh Cheetos is feral cat lives near by. I think someone is feeding her regulaly.", "She got her with her moves. lol she likes to get special treats from people.", "yeah she got me too. I thought she was pregnent, but turns out it was food baby"], coordinate: CLLocationCoordinate2D(latitude: 37.72148075168351, longitude: -122.47812213135781))
+        Fellow(name: "Felix", status: "stray cat", descLists: ["Felix is kind and friendly.", "Felix is too friendly, I think he is indoor cat", "I took him to vet to check the chip on him, but no.", "oh...","Someone is looking for black cat near parkmerced, and I think it is Felix!"], coordinate: CLLocationCoordinate2D(latitude: 37.722548511737195, longitude: -122.48208693212523)),
+        Fellow(name: "Tigger", status: "indoor cat likes to go out", descLists: ["Hi everyone, This is my cat Tigger, She is curious and fun who likes to hang out near my house. Please don't feed her snack. She is getting enough.", "I saw her yesterday at my backyard. she's a cutie"], coordinate: CLLocationCoordinate2D(latitude: 37.71856948428043, longitude: -122.48139363763083)),
+        Fellow(name: "Cheetos", status: "community cats", descLists: ["I saw her yesterday, she seemed hungry so I fed her.", "oh Cheetos is feral cat lives near by. I think someone is feeding her regulaly.", "She got her with her moves. lol she likes to get special treats from people.", "yeah she got me too. I thought she was pregnent, but turns out it was food baby"], coordinate: CLLocationCoordinate2D(latitude: 37.72148075168351, longitude: -122.47812213135781))
     ]
     
     private func getRegion() -> Binding<MKCoordinateRegion> {
@@ -45,7 +45,7 @@ struct ContentView: View {
                 { place in
                     MapAnnotation(coordinate: place.coordinate) {
                         NavigationLink {
-                            PlaceDetailView(place: place)
+                            FellowDetailView(place: place)
                         } label: {
                             
                             
