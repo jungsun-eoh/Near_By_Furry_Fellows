@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import MapKit
 
-struct FellowView: View {
+struct FellowMapView: View {
     let title: String
     
     var body: some View {
@@ -34,7 +34,7 @@ struct FellowView: View {
 
 struct FellowView_Previews: PreviewProvider {
   static var previews: some View {
-      FellowView(title: "Fellows view")
+      FellowMapView(title: "Fellows view")
       .background(Color.gray)
   }
 }

@@ -17,10 +17,16 @@ struct Fellow: Identifiable {
     let coordinate: CLLocationCoordinate2D
 }
 
+enum DisplayType {
+    case map
+    case list
+}
+
 struct ContentView: View {
     @StateObject private var placeListVM = PlaceListViewModel()
     @State private var userTrackingMode: MapUserTrackingMode = .follow
     @State private var searchTerm: String = ""
+    @State private var displayType: DisplayType = .map
     
     let furryFellows = [
         Fellow(name: "Felix", status: "stray cat", descLists: ["Felix is kind and friendly.", "Felix is too friendly, I think he is indoor cat", "I took him to vet to check the chip on him, but no.", "oh...","Someone is looking for black cat near parkmerced, and I think it is Felix!"], coordinate: CLLocationCoordinate2D(latitude: 37.722548511737195, longitude: -122.48208693212523)),
@@ -39,31 +45,29 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            NavigationView {
-                
-                Map(coordinateRegion: getRegion(), interactionModes: .all, showsUserLocation: true, userTrackingMode: $userTrackingMode, annotationItems: furryFellows)
-                { place in
-                    MapAnnotation(coordinate: place.coordinate) {
-                        NavigationLink {
-                            FellowDetailView(place: place)
-                        } label: {
-                            
-                            
-                              
-                            FellowView(title: place.name)
-                              
+            Picker("Select", selection:$displayType) {
+                Text("Map").tag(DisplayType.map)
+                Text("List").tag(DisplayType.list)
+            }.pickerStyle(SegmentedPickerStyle())
+            
+            if displayType == .map {
+                NavigationView {
+                    Map(coordinateRegion: getRegion(), interactionModes: .all, showsUserLocation: true, userTrackingMode: $userTrackingMode, annotationItems: furryFellows)
+                    { place in
+                        MapAnnotation(coordinate: place.coordinate) {
+                            NavigationLink {
+                                FellowDetailView(place: place)
+                            } label: {
+                                FellowMapView(title: place.name)
+                            }
                         }
-                        
-                        
-                     
-                                                    
                     }
-                    
+                    .ignoresSafeArea(edges: .bottom)
+                    .navigationTitle("Near by Furry Fellows")
+                    .navigationBarTitleDisplayMode(.inline)
                 }
-                .ignoresSafeArea(edges: .bottom)
-                .navigationTitle("Near by Furry Fellows")
-                .navigationBarTitleDisplayMode(.inline)
-
+            } else {
+                FellowListView(furryFellows: furryFellows)
             }
 
         }.padding()
