@@ -13,7 +13,7 @@ struct Fellow: Identifiable {
     let id = UUID()
     let name: String
     let status: String
-    let descLists: [String]
+    var descLists: [String]
     let coordinate: CLLocationCoordinate2D
 }
 

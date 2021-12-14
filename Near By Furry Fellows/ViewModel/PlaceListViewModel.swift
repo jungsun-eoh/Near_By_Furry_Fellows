@@ -28,18 +28,18 @@ class PlaceListViewModel: ObservableObject {
         }
     }
     
-    func searchLandmakrs(searchTerm: String) {
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = searchTerm
-        
-        let search = MKLocalSearch(request: request)
-        search.start {(response, error) in
-            if let error = error {
-                print(error)
-            } else if let response = response {
-                let mapItems = response.mapItems
-                print(mapItems)
-            }
-        }
-    }
+//    func searchLandmakrs(searchTerm: String) {
+//        let request = MKLocalSearch.Request()
+//        request.naturalLanguageQuery = searchTerm
+//
+//        let search = MKLocalSearch(request: request)
+//        search.start {(response, error) in
+//            if let error = error {
+//                print(error)
+//            } else if let response = response {
+//                let mapItems = response.mapItems
+//                print(mapItems)
+//            }
+//        }
+//    }
 }
