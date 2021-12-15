@@ -17,6 +17,7 @@
 		38BD736527646DB500F15A40 /* FellowDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD736427646DB500F15A40 /* FellowDetailView.swift */; };
 		38BD73672764710800F15A40 /* FellowMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD73662764710800F15A40 /* FellowMapView.swift */; };
 		38EA16C327686C5200717EE4 /* FellowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EA16C227686C5200717EE4 /* FellowListView.swift */; };
+		38EA16C627699C9700717EE4 /* addNewFellowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EA16C527699C9700717EE4 /* addNewFellowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		38BD736427646DB500F15A40 /* FellowDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FellowDetailView.swift; sourceTree = "<group>"; };
 		38BD73662764710800F15A40 /* FellowMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FellowMapView.swift; sourceTree = "<group>"; };
 		38EA16C227686C5200717EE4 /* FellowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FellowListView.swift; sourceTree = "<group>"; };
+		38EA16C527699C9700717EE4 /* addNewFellowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewFellowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +95,6 @@
 				381EE76E27603B570000407F /* Extentions */,
 				3824B9F42758222900E7D46E /* Near_By_Furry_FellowsApp.swift */,
 				3824B9F62758222900E7D46E /* ContentView.swift */,
-				38BD73662764710800F15A40 /* FellowMapView.swift */,
-				38BD736427646DB500F15A40 /* FellowDetailView.swift */,
-				38EA16C227686C5200717EE4 /* FellowListView.swift */,
 				3824B9F82758222B00E7D46E /* Assets.xcassets */,
 				3824B9FA2758222B00E7D46E /* Preview Content */,
 			);
@@ -113,6 +112,10 @@
 		38EA16C127686BEA00717EE4 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				38BD73662764710800F15A40 /* FellowMapView.swift */,
+				38BD736427646DB500F15A40 /* FellowDetailView.swift */,
+				38EA16C227686C5200717EE4 /* FellowListView.swift */,
+				38EA16C527699C9700717EE4 /* addNewFellowView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EA16C627699C9700717EE4 /* addNewFellowView.swift in Sources */,
 				381EE773276046390000407F /* LocationManager.swift in Sources */,
 				38BD736527646DB500F15A40 /* FellowDetailView.swift in Sources */,
 				3824B9F72758222900E7D46E /* ContentView.swift in Sources */,

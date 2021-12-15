@@ -22,8 +22,8 @@ struct FellowDetailView: View {
             ForEach(place.descLists, id: \.self) {
                 desc in
                 Text("\(desc.description)")
-                    .background(Color.blue.opacity(0.2))
-                    .font(.footnote)
+                    .background(Color.yellow.opacity(0.2))
+                    .font(.callout)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity, alignment: .center)
                 Text("")
@@ -51,6 +51,6 @@ struct FellowDetailView: View {
 
 struct PlaceDetailView_Previews: PreviewProvider {
   static var previews: some View {
-      FellowDetailView(place: Fellow(name: "Fellow name", status: "Fellow status", descLists: ["description"], coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)))
+      FellowDetailView(place: Fellow(_name: "Fellow name", _status: "Fellow status", _descLists: ["description"], _coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)))
   }
 }

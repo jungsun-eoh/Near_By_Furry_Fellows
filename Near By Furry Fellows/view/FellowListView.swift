@@ -23,8 +23,3 @@ struct FellowListView: View {
     }
 }
 
-//struct FellowListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FellowListView()
-//    }
-//}
