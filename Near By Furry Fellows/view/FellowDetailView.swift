@@ -15,6 +15,11 @@ struct FellowDetailView: View {
     
     var body: some View {
         VStack() {
+            Image("cat_circle")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 120, height: 120, alignment: .center)
+            
           Text(place.status)
             .font(.headline)
             Divider()
@@ -22,7 +27,7 @@ struct FellowDetailView: View {
             ForEach(place.descLists, id: \.self) {
                 desc in
                 Text("\(desc.description)")
-                    .background(Color.yellow.opacity(0.2))
+                    .background(Color.orange.opacity(0.2))
                     .font(.callout)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -43,7 +48,7 @@ struct FellowDetailView: View {
                 newText = ""
             })
             .textFieldStyle(RoundedBorderTextFieldStyle())
-            .border(Color.yellow,width: 2)
+            .border(Color.orange,width: 2)
         }
         .navigationTitle(place.name)
       }

@@ -27,7 +27,7 @@ struct addNewFellowView: View {
                     print("name typed: \(name)")
                 })
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .border(Color.yellow,width: 2)
+                .border(Color.orange,width: 2)
                 .padding(.vertical, 12)
                 .padding(.horizontal, 16)
                 TextField("status: ", text: $status,
@@ -35,7 +35,7 @@ struct addNewFellowView: View {
                     print("status typed: \(status)")
                 })
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .border(Color.yellow, width: 2)
+                .border(Color.orange, width: 2)
                 .padding(.vertical, 12)
                 .padding(.horizontal, 16)
            
@@ -43,7 +43,7 @@ struct addNewFellowView: View {
                     //furryFellows.append(Fellow(_name: name, _status: status, _descLists: [""], _coordinate: coordinate))
                     
                 }
-            }.background(Color.yellow)
+            }.background(Color.orange)
             .navigationBarTitle(Text("Add a new Fellow"), displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
                         self.toggleSheetView = false
