@@ -8,3 +8,5 @@ The NBFF provides animal profiles near users' communities to acknowledge the urb
 - The NBFF encourages open conversation between community members. 
 - The NBFF offers a way of coexisting with your furry neighbors. 
 
+# little more,,,
+https://docs.google.com/presentation/d/1bO66VIFfsqNTb04ybzu4cQV0g4yN-KtpW5GzllNGp8A/edit?usp=sharing
